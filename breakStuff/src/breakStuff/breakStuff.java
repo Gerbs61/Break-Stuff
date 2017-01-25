@@ -29,30 +29,32 @@ public class breakStuff {
 				System.out.println("lets play a game, a thinking game.");
 				System.out.println("Im gonna give you a riddle to solve");
 				System.out.println("Answer jeopardy style, ex. what is a _______");
-				System.out.println("What starts its life on four legs");
+				System.out.println("What starts its life on all fours");
 				System.out.println("Then two, and dies with the assistance of a third?");
-				if (userInput.equals("what is a man"))
+				Scanner userInput0 = new Scanner(System.in);
+				String answer = userInput0.nextLine ();
+				if (userInput0.equals("what is a human"))
 				{
 					System.out.println("Correct");
 				}
-				else 
+				else
 				{
-					System.out.println("no, it is a man as a baby, an adult, and elder with a cane");
+					System.out.println("No, the answer is a human");
 				}
 			System.exit(0);
 			}
 			else if (mode == 2)
 			{
-				Scanner userInput4 = new Scanner(System.in);
-				entertainment = userInput4.nextInt ();
 				System.out.println("1.) movie");
 				System.out.println("2.) show");
+				Scanner userInput4 = new Scanner(System.in);
+				entertainment = userInput4.nextInt ();
 				if (entertainment == 1)
 				{
 					System.out.println("1.) action");
 					System.out.println("2.) comedy");
 					Scanner userInput5 = new Scanner(System.in);
-					entertainment = userInput5.nextInt ();
+					movie = userInput5.nextInt ();
 					if (movie == 1)
 					{
 						System.out.println("I would suggest South paw, Black Hawk Down, or The Accountant");
@@ -61,9 +63,9 @@ public class breakStuff {
 					{
 						System.out.println("I would recomend Deadpool, Taladega Knights, Monty Python and the Holy Grail, or Step Brothers");
 					}
-					Scanner userInput6 = new Scanner(System.in);
-					entertainment = userInput6.nextInt ();
-					if (show == 2)
+				Scanner userInput6 = new Scanner(System.in);
+				show = userInput6.nextInt ();
+				if (show == 2)
 					{
 						System.out.println("1.) Suspense");
 						System.out.println("2.) relaxing");
@@ -71,10 +73,11 @@ public class breakStuff {
 						{
 							System.out.println("I suggest Sons of Anarchy or Supernatural.");
 						}
-						if (show == 2)
+						else if (show == 2)
 						{
 							System.out.println("Maybe some American dad.");
 						}
+						
 					}
 					System.exit(0);
 					if(mode == 3)
